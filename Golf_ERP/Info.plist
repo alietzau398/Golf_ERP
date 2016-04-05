@@ -38,10 +38,10 @@
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Main</string>
 	<key>XSAppIconAssets</key>
-	<string>Resources/image.xcassets/AppIcons.appiconset</string>
+	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 	<key>MinimumOSVersion</key>
-	<string>9.2</string>
+	<string></string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>3</string>
 </dict>
 </plist>
