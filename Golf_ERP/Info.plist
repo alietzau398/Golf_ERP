@@ -8,6 +8,8 @@
 	<string>com.LietzauBros.GolfERP</string>
 	<key>CFBundleShortVersionString</key>
 	<string>0.2</string>
+	<key>CFBundleVersion</key>
+	<string>0.2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIDeviceFamily</key>
@@ -41,7 +43,5 @@
 	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 	<key>MinimumOSVersion</key>
 	<string></string>
-	<key>CFBundleVersion</key>
-	<string>3</string>
 </dict>
 </plist>
