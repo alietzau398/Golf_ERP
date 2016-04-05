@@ -20,7 +20,7 @@ namespace Golf_ERP
             {
                 //navigate to welcome page,
                 var welcome = Storyboard.InstantiateViewController("Welcome") as WelcomeController;
-                NavigationController.PushViewController(welcome, true);
+                //NavigationController.PushViewController(welcome, true);
 
             }
         }
