@@ -16,11 +16,19 @@ namespace Golf_ERP
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnFleet { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btnLogOff { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblWelcome { get; set; }
+
+		[Action ("BtnFleet_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void BtnFleet_TouchUpInside (UIButton sender);
 
 		[Action ("BtnLogOff_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -28,6 +36,10 @@ namespace Golf_ERP
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnFleet != null) {
+				btnFleet.Dispose ();
+				btnFleet = null;
+			}
 			if (btnLogOff != null) {
 				btnLogOff.Dispose ();
 				btnLogOff = null;

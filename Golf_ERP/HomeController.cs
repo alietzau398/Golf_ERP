@@ -20,9 +20,26 @@ namespace Golf_ERP
             {
                 //navigate to welcome page,
                 var welcome = Storyboard.InstantiateViewController("Welcome") as WelcomeController;
-                NavigationController.PushViewController(welcome, true);
+                NavigationController.PresentModalViewController(welcome, true);
 
+                //remove the back button if the back button is not hidden
+                if (!(this.NavigationItem.HidesBackButton))
+                {
+                    this.NavigationItem.SetHidesBackButton(true, false);
+                }
             }
+        }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            
+            //remove the back button if the back button is not hidden
+            if (!(this.NavigationItem.HidesBackButton))
+            {
+                this.NavigationItem.SetHidesBackButton(true, false);
+            }
+
         }
 
         async partial void BtnLogin_TouchUpInside(UIButton sender)
@@ -52,10 +69,10 @@ namespace Golf_ERP
                     //alert.Show();
                     //navigate to the welcome page,
                     //note: welcome is the storyboard ID of the welcomecontroller
+
+                    //navigate to other page using pushview
                     var welcome = Storyboard.InstantiateViewController("Welcome") as WelcomeController;
                     NavigationController.PushViewController(welcome, true);
-                    //var welcome = Storyboard.InstantiateViewController("welcome") as WelcomeController;
-                    //NavigationController.PushViewController(welcome, true);
                 }
                 catch (ParseException f)
                 {

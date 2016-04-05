@@ -109,7 +109,7 @@
                                 </state>
                                 <connections>
                                     <action selector="BtnFleet_TouchUpInside:" destination="99" id="271" eventType="touchUpInside"/>
-                                    <segue id="373" destination="252" kind="push"/>
+                                    <segue id="584" destination="382" kind="push"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="108" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="1189"/>
+            <point key="canvasLocation" x="1228" y="1200"/>
         </scene>
         <scene sceneID="251">
             <objects>
@@ -241,11 +241,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="258" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191" y="51"/>
+            <point key="canvasLocation" x="2160" y="-1072"/>
         </scene>
         <scene sceneID="381">
             <objects>
-                <tableViewController id="382" sceneMemberID="viewController">
+                <tableViewController id="382" sceneMemberID="viewController" customClass="emptyTable">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="383">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +268,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="388" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3021" y="42"/>
+            <point key="canvasLocation" x="2159" y="50"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

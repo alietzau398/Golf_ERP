@@ -42,6 +42,6 @@
 	<key>MinimumOSVersion</key>
 	<string>9.2</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
 </dict>
 </plist>

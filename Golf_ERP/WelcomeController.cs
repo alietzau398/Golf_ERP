@@ -16,6 +16,10 @@ namespace Golf_ERP
         {
             base.ViewDidLoad();
 
+            //remove the back button so log in page will not be accessed.
+            this.NavigationItem.SetHidesBackButton(true, false);
+
+
             //on page load, we will show the current user's first name from parse
             var currentUser = ParseUser.CurrentUser;
             lblWelcome.Text = "Welcome, " + currentUser["fName"];
@@ -24,7 +28,8 @@ namespace Golf_ERP
         partial void BtnLogOff_TouchUpInside(UIButton sender)
         {
             ParseUser.LogOut();
-            NavigationController.PopViewController(true);
+            var home = Storyboard.InstantiateViewController("home") as HomeController;
+            NavigationController.PushViewController(home, true);
         }
     }
 }

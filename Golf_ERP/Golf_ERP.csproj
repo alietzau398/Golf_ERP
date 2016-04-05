@@ -58,7 +58,8 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution: Adam Lietzau (2UCS4XPJPY)</CodesignKey>
+    <CodesignProvision>1afa8cf4-1bba-43cc-9d87-1809b4576dc3</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -88,6 +89,17 @@
     </IpaPackageName>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="cart.cs" />
+    <Compile Include="emptyTable.cs" />
+    <Compile Include="emptyTable.designer.cs">
+      <DependentUpon>emptyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FleetTableCell.cs" />
+    <Compile Include="FleetTableController.cs" />
+    <Compile Include="FleetTableController.designer.cs">
+      <DependentUpon>FleetTableController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FleetTableSource.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="HomeController.designer.cs">
       <DependentUpon>HomeController.cs</DependentUpon>
@@ -97,6 +109,7 @@
     <None Include="GettingStarted.Xamarin" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Info.plist" />
+    <Compile Include="repair.cs" />
     <Compile Include="WelcomeController.cs" />
     <Compile Include="WelcomeController.designer.cs">
       <DependentUpon>WelcomeController.cs</DependentUpon>
@@ -116,7 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Parse.iOS">
-      <HintPath>..\..\..\..\Downloads\Parse-1.7.0\Parse.iOS\Parse.iOS.dll</HintPath>
+      <HintPath>..\..\..\..\..\Marquette\2016a Spring\INTE 4995\Parse-1.7.0\Parse.iOS\Parse.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -128,54 +141,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-60@2x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-60@3x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-76.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-76@2x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-83.5@2x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Small-40@2x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Small.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Small@2x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Small@3x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Spotlight-40.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Spotlight-40@2x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/AppIcons.appiconset/Icon-Spotlight-40@3x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/LaunchImages.launchimage/start%201024x748.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/LaunchImages.launchimage/start%201536x2008.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/LaunchImages.launchimage/start%202048x1496.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources/Media.xcassets/LaunchImages.launchimage/start%20768x1004.png">
-      <InProject>false</InProject>
-    </ImageAsset>
     <ImageAsset Include="Resources\image.xcassets\AppIcons.appiconset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
@@ -306,6 +271,18 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\start 1024x748.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\start 1536x2008.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\start 2048x1496.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\start 768x1004.png">
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>
